@@ -36,7 +36,7 @@ protected:
 class ClientPart :public ClientServer {
 public:
     ClientPart() : ClientServer() {};
-    void connectToServer(const char* ip, unsigned short port);
+    int connectToServer(const char* ip, unsigned short port);
     void post(const vector<char>& buf);
 private:
     int tryConnectToServer();
